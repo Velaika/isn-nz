@@ -35,7 +35,7 @@ export const ImportantInformationSection = () => (
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0, 0, 0.2, 1] } },
 };
 
 /**
@@ -76,7 +76,7 @@ const InfoCard = ({ card, index }: { card: InfoCardProps; index: number }) => {
   const CardContentWrapper = ({ children }: { children: React.ReactNode }) => (
     <motion.div
       variants={itemVariants}
-      transition={{ duration: 0.6, delay: 0.1 * index, ease: "easeOut" }}
+      transition={{ duration: 0.6, delay: 0.1 * index, ease: [0, 0, 0.2, 1] }}
       className="group h-full"
     >
       <Card
