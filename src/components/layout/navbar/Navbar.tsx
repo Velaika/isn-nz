@@ -10,9 +10,8 @@ import AnnouncementBanner from "./NavbarCountdownTimer";
 import { NavbarLogo } from "./NavbarLogo";
 
 /**
- * The main navigation header for the site.
- * Features a "glassmorphism" effect that appears and intensifies on scroll.
- * It is composed of an announcement banner, contact info bar, and the primary navigation.
+ * Redesigned main navigation header with modern glassmorphism effect.
+ * Features smooth transitions, better visual hierarchy, and enhanced scrolling behavior.
  */
 export const NavbarComponent = (): React.JSX.Element => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -20,7 +19,7 @@ export const NavbarComponent = (): React.JSX.Element => {
   useEffect(() => {
     const handleScroll = (): void => {
       window.requestAnimationFrame(() => {
-        setIsScrolled(window.scrollY > 10);
+        setIsScrolled(window.scrollY > 20);
       });
     };
 
@@ -33,19 +32,21 @@ export const NavbarComponent = (): React.JSX.Element => {
       <AnnouncementBanner />
       <header
         className={cn(
-          "sticky top-0 z-50 w-full border-b backdrop-blur-xl transition-all duration-300",
-
-          "supports-[backdrop-filter]:bg-background/60",
-
+          "sticky top-0 z-50 w-full transition-all duration-300",
+          "backdrop-blur-xl supports-[backdrop-filter]:bg-background/80",
           isScrolled
-            ? "border-border/30 bg-background/80 shadow-lg"
-            : // At the top, it's transparent to blend with the hero section.
-            "border-transparent bg-transparent shadow-none",
+            ? "border-b border-border/40 bg-background/90 shadow-lg shadow-black/5"
+            : "border-b border-transparent bg-transparent shadow-none",
         )}
       >
         <ContactInfoBar />
-        <div className="flex items-center justify-between px-5">
-          <NavbarLogo />
+        <div
+          className={cn(
+            "flex items-center justify-between px-4 transition-all duration-300 lg:px-6",
+            isScrolled ? "py-2 xl:py-2" : "py-2.5 xl:py-3",
+          )}
+        >
+          <NavbarLogo isScrolled={isScrolled} />
           <DesktopNavigation items={MAIN_NAV_ITEMS} />
           <MobileNavigation items={MAIN_NAV_ITEMS} />
         </div>
