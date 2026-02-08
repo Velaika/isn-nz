@@ -14,7 +14,8 @@ import {
  */
 export const PATRONS_DATA: OrganizerPropsType[] = getAllPatrons();
 export const ADVISORS_DATA: OrganizerPropsType[] = getAllAdvisors();
-export const ORGANIZERS_DATA: OrganizerPropsType[] = getAllOrganizingCommittee();
+export const ORGANIZERS_DATA: OrganizerPropsType[] =
+  getAllOrganizingCommittee();
 export const SCIENTIFIC_COMMITTEE_DATA: OrganizerPropsType[] =
   getAllScientificCommittee();
 export const INTERNATIONAL_FACULTY_DATA: OrganizerPropsType[] =

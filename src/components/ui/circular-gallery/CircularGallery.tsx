@@ -124,7 +124,6 @@ class Title {
   }
 
   createMesh() {
-
     const {
       texture: nameTexture,
       width: nameWidth,
@@ -171,7 +170,6 @@ class Title {
     nameMesh.setParent(this.plane);
     this.meshes.push(nameMesh);
 
-
     if (this.role) {
       currentYOffset -= nameHeightScaled * 0.8;
       const {
@@ -217,7 +215,6 @@ class Title {
       roleMesh.setParent(this.plane);
       this.meshes.push(roleMesh);
     }
-
 
     if (this.institution) {
       currentYOffset -= this.role

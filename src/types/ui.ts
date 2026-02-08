@@ -13,7 +13,11 @@ export interface LayoutPropsType {
   showFooter?: boolean;
 }
 
-export type ConferenceStatusType = "countdown" | "ongoing" | "ended" | "loading";
+export type ConferenceStatusType =
+  | "countdown"
+  | "ongoing"
+  | "ended"
+  | "loading";
 export interface ConferenceStateType {
   status: ConferenceStatusType;
   timeText: string;

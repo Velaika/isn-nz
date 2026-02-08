@@ -152,7 +152,6 @@ function IllustrationSection() {
  */
 function ContentSection() {
   return (
-
     <motion.div
       variants={animations.staggered}
       className="text-center lg:text-left"

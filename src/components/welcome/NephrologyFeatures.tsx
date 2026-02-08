@@ -13,8 +13,6 @@ import {
 import { SURGICAL_FEATURES_DATA } from "@/lib/constants/surgical-features";
 import type { SurgicalFeaturePropsType } from "@/types";
 
-
-
 /**
  * A refined section showcasing focus areas with a unified 'magnetic tilt' card grid.
  */
@@ -36,8 +34,6 @@ export const SurgicalFeatures = () => (
     </div>
   </motion.section>
 );
-
-
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -81,7 +77,6 @@ const FeatureCard = ({
     mouseX.set(event.clientX - left);
     mouseY.set(event.clientY - top);
   };
-
 
   const smoothMouseX = useSpring(mouseX, { damping: 40, stiffness: 400 });
   const smoothMouseY = useSpring(mouseY, { damping: 40, stiffness: 400 });

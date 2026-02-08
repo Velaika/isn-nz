@@ -110,7 +110,7 @@ export const StandardCard = ({
       className={cn(
         "rounded-2xl border border-border/50 bg-card/60 p-6 backdrop-blur-sm transition-all duration-300",
         hover &&
-        "hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5",
+          "hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5",
         className,
       )}
     >

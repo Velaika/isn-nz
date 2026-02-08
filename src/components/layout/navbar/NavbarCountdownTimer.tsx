@@ -12,7 +12,6 @@ import { cn } from "@/lib/utils";
 const AnnouncementBanner = () => {
   const { status, timeText, daysUntilStart } = useConferenceStatus();
 
-
   if (status === "ended" || status === "loading") {
     return <></>;
   }

@@ -11,14 +11,11 @@ import {
 } from "@/components/ui/card";
 import { CONFERENCE_HIGHLIGHTS } from "@/lib/constants/conference-highlights";
 
-
 interface HighlightDataType {
   title: string;
   description: string;
   icon: React.ReactNode;
 }
-
-
 
 /**
  * Conference highlights section with modern card grid
@@ -45,8 +42,6 @@ export const ConferenceHighlightsSection = () => (
     </div>
   </motion.section>
 );
-
-
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },

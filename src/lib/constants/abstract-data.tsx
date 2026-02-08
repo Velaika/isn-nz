@@ -137,7 +137,6 @@ export const GUIDELINES: GuidelineType[] = [
   },
 ];
 
-
 export const SUBMISSION_PROCESS_STEPS = [
   {
     step: 1,

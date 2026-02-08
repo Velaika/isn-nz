@@ -5,12 +5,12 @@ export interface ScheduleSessionType {
   chairperson?: string;
   additionalSpeakers?: string[];
   type?:
-  | "inauguration"
-  | "session"
-  | "slide-seminar"
-  | "lunch"
-  | "tea-break"
-  | "poster-review";
+    | "inauguration"
+    | "session"
+    | "slide-seminar"
+    | "lunch"
+    | "tea-break"
+    | "poster-review";
 }
 
 export interface DayScheduleType {

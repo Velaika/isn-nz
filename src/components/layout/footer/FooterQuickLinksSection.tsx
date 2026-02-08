@@ -1,5 +1,3 @@
-
-
 import { motion } from "framer-motion";
 import { LinkIcon } from "lucide-react";
 import { FooterLink, FooterSectionHeader } from "./FooterShared";

@@ -14,7 +14,6 @@ import { RegistrationHighlightsSection } from "@/components/pages/registration/R
 export default function RegistrationPage() {
   const [isEarlyBird, setIsEarlyBird] = useState(true);
 
-
   useEffect(() => {
     const earlyBirdEndDate = new Date("2025-12-31T23:59:59");
     setIsEarlyBird(new Date() < earlyBirdEndDate);
